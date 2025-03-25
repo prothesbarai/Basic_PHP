@@ -30,5 +30,16 @@
         
     ?>
 
+    <?php
+    
+        define("abc","A Constant");
+        echo "<br>".abc."<br>";
+        echo constant("abc")."<br>";
+        $text = "constant";
+        echo "Constant And Veriable = ".$text("abc"); // $text = constant bosbe then 37 Number lines work
+
+
+    ?>
+
 </body>
 </html>
