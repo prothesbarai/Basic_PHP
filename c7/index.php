@@ -51,7 +51,7 @@
         /*
             echo deya only akta veriable print kora jay but function with variable print possiable noy cause echo function 
             name ke simple string count kore... otherhand printf() er majhe function with variable use kora jay.. and %s for 
-            string %d for int %f for double %b for binary %o for octal %x or %X fox Hexadecimal %c for ASCCI character use kore....[%s,%d,%f = name is placeholder]
+            string %d for int %f for double %b for binary %o for octal %x or %X fox Hexadecimal %c for ASCCI character use kore....[%s,%d,%f = name is placeholder / specifier]
         */
 
         // echo deye o kora jay but sejonno concartination korte hobe string
@@ -59,12 +59,36 @@
         // Here a Big Example
         $first_name = "prothes";
         $last_name = "barai";
-        $show_names = "
+        $amount = 100;
+        $price = 10.99;
+        $show_names1 = "
             <div>
                 <h1>%s %s</h1>
             </div>
         ";
-        printf($show_names,ucwords($first_name),ucwords($last_name));
+        $show_names2 = "
+            <div>
+                <h1>%2\$s %1\$s</h1> 
+            </div>
+        ";// When Change The position of variable
+
+        $show_amount = "
+            <h1>Your amount is %1\$d . And Balance is : %1\$d</h1>
+        ";// Same Variable use Multiple Place
+
+        $show_price1 = "
+            <h1>This Price is %1\$d . And Balance is : %1\$d</h1>
+        ";// Float to Integer  [%d == %.0f is same jinis]
+        
+        $show_price2 = "
+            <h1>This Price is %1\$.2f . And Balance is : %1\$.2f</h1>
+        ";// After . to value show
+
+        printf($show_names1,ucwords($first_name),ucwords($last_name));
+        printf($show_names2,$first_name,$last_name);
+        printf($show_amount,$amount);
+        printf($show_price1,$price); 
+        printf($show_price2,$price); 
     ?>
 
 
