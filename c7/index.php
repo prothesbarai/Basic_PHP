@@ -51,8 +51,10 @@
         /*
             echo deya only akta veriable print kora jay but function with variable print possiable noy cause echo function 
             name ke simple string count kore... otherhand printf() er majhe function with variable use kora jay.. and %s for 
-            string %d for int %f for double use kore....[%s,%d,%f = name is placeholder]
+            string %d for int %f for double %b for binary %o for octal %x or %X fox Hexadecimal %c for ASCCI character use kore....[%s,%d,%f = name is placeholder]
         */
+
+        // echo deye o kora jay but sejonno concartination korte hobe string
 
         // Here a Big Example
         $first_name = "prothes";
