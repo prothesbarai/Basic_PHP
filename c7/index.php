@@ -84,11 +84,33 @@
             <h1>This Price is %1\$.2f . And Balance is : %1\$.2f</h1>
         ";// After . to value show
 
+
+        $show_string1 = "
+            <h1>My Name is %010.5s</h1>
+            <h1>My Name is %-'@10.5s</h1>
+        ";
+        /*
+            1. %010.5s mane holo .5 means total 5 ta character nebe variable theke r mot string length hobe 10 ta baki gulo filup hobe 0 deye tai 10 er aghe 0 ase.. r ata aghe 0 vorat hobe then chracter
+
+            2. %-'@10.5s  - mane holo @ ata last e hobe first e chracter print hobe [0 bade jode kono symbol dete hoy tahole 'symbol dete hobe]
+        */
+
+
+        $show_string2 = "
+            <h1>My Name is %1\$010.5s</h1>
+            <h1>My Name is %1\$-'@10.5s</h1>
+        ";
+        // Same Work But One Variable not Double $first_name variable for    1\$   this work 
+
+
         printf($show_names1,ucwords($first_name),ucwords($last_name));
         printf($show_names2,$first_name,$last_name);
         printf($show_amount,$amount);
         printf($show_price1,$price); 
         printf($show_price2,$price); 
+        printf($show_string1,$first_name,$first_name); 
+        echo "<br><hr>";
+        printf($show_string2,$first_name); 
     ?>
 
 
