@@ -78,7 +78,7 @@
 
         $show_price1 = "
             <h1>This Price is %1\$d . And Balance is : %1\$d</h1>
-        ";// Float to Integer  [%d == %.0f is same jinis]
+        ";// Float to Integer  [%d == %.0f is same jinis but accurate 100% answer purity is %.0f]
         
         $show_price2 = "
             <h1>This Price is %1\$.2f . And Balance is : %1\$.2f</h1>
